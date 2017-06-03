@@ -10,8 +10,9 @@
 #import <CoreLocation/CoreLocation.h>
 @interface Court: NSObject
 @property NSString* name;
+@property NSInteger* courtId;
 @property NSString* courtType;
 @property CLLocation* location;
 
-- (id)init: (NSString*) name courtType: (NSString*) courtType location: (CLLocation*) location;
+- (id)init: (NSString*) name courtId: (NSInteger*) courtId courtType: (NSString*) courtType location: (CLLocation*) location;
 @end

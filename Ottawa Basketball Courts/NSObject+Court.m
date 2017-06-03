@@ -9,11 +9,12 @@
 #import "NSObject+Court.h"
 
 @implementation Court
-- (id)init: (NSString*) name courtType: (NSString*) courtType location: (CLLocation*) location
+- (id)init: (NSString*) name courtId: (NSInteger*) courtId courtType: (NSString*) courtType location: (CLLocation*) location
 {
     self.courtType = courtType;
     self.name = name;
     self.location = location;
+    self.courtId = courtId;
     if (self)
     {
         // superclass successfully initialized, further

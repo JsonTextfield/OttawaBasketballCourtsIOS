@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "NSObject+Court.h"
+#import "MyDB.h"
 
 @interface ViewController ()
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
@@ -22,35 +23,22 @@
         // Do any additional setup after loading the view, typically from a nib.
     _locationManager = [[CLLocationManager alloc]init];
     [_locationManager requestWhenInUseAuthorization];
-    
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance (_locationManager.location.coordinate, 2000, 2000);
+    CLLocation* t = [[CLLocation alloc] initWithLatitude:45.35 longitude:-75.7];
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance (t.coordinate, 2000, 2000);
     [_mapView setRegion:region animated:NO];
     MKMapCamera* newCamera = [[_mapView camera] copy];
     [newCamera setHeading:-30.0]; // or newCamera.heading + 90.0 % 360.0
     [_mapView setCamera:newCamera animated:NO];
     
     
-    
-    
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"basketball-courts" ofType:@"json"];
-    NSString *myJSON = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:NULL];
-    NSError *error =  nil;
-    
-    NSArray *jsonDataArray = [NSJSONSerialization JSONObjectWithData:[myJSON dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error][@"features"];
-    
-    for (id it in jsonDataArray){
-        double lat, lng;
-        lat = [[it[@"geometry"][@"coordinates"] objectAtIndex:1] doubleValue];
-        lng = [[it[@"geometry"][@"coordinates"] objectAtIndex:0] doubleValue];
-        
-        CLLocation *location = [[CLLocation alloc] initWithLatitude:lat longitude:lng];
-        Court* court = [[Court alloc] init:it[@"properties"][@"NAME"] courtType:it[@"properties"][@"COURT_TYPE"] location: location];
-        
+    NSArray* courts = [MyDB database].courts;
+    for (Court* it in courts){
         MKPointAnnotation*  marker = [[MKPointAnnotation alloc]init];
-        marker.coordinate = court.location.coordinate;
-        marker.title = court.name;
+        marker.coordinate = it.location.coordinate;
+        marker.title = [NSString stringWithFormat:@"%@ - %@", it.name, it.courtType];
         [_mapView addAnnotation: (marker)];
     }
+    
 }
 
 - (void)didReceiveMemoryWarning {

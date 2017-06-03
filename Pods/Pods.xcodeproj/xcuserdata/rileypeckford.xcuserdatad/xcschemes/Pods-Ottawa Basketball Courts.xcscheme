@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9AEBDCD41D83EAA600557E31"
-               BuildableName = "Ottawa Basketball Courts.app"
-               BlueprintName = "Ottawa Basketball Courts"
-               ReferencedContainer = "container:Ottawa Basketball Courts.xcodeproj">
+               BlueprintIdentifier = "EFFFF44EE963B31578DAC76B5E11A347"
+               BuildableName = "libPods-Ottawa Basketball Courts.a"
+               BlueprintName = "Pods-Ottawa Basketball Courts"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,15 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9AEBDCD41D83EAA600557E31"
-            BuildableName = "Ottawa Basketball Courts.app"
-            BlueprintName = "Ottawa Basketball Courts"
-            ReferencedContainer = "container:Ottawa Basketball Courts.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -51,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9AEBDCD41D83EAA600557E31"
-            BuildableName = "Ottawa Basketball Courts.app"
-            BlueprintName = "Ottawa Basketball Courts"
-            ReferencedContainer = "container:Ottawa Basketball Courts.xcodeproj">
+            BlueprintIdentifier = "EFFFF44EE963B31578DAC76B5E11A347"
+            BuildableName = "libPods-Ottawa Basketball Courts.a"
+            BlueprintName = "Pods-Ottawa Basketball Courts"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -70,16 +60,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9AEBDCD41D83EAA600557E31"
-            BuildableName = "Ottawa Basketball Courts.app"
-            BlueprintName = "Ottawa Basketball Courts"
-            ReferencedContainer = "container:Ottawa Basketball Courts.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

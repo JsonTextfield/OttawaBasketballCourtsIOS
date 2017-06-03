@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		634A594E644289DB4ADA7854 /* libPods-Ottawa Basketball Courts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E6AD63CC4149DEAA8129BE /* libPods-Ottawa Basketball Courts.a */; };
+		9A9A76931EE310EF0079D186 /* MyDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9A76921EE310EF0079D186 /* MyDB.m */; };
+		9A9D86751EE31DE8004E9D24 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9D86741EE31DE8004E9D24 /* libsqlite3.tbd */; };
+		9A9D86781EE35BB7004E9D24 /* basketball.db in Resources */ = {isa = PBXBuildFile; fileRef = 9A9D86771EE35BB7004E9D24 /* basketball.db */; };
 		9AEBDCDA1D83EAA600557E31 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEBDCD91D83EAA600557E31 /* main.m */; };
 		9AEBDCDD1D83EAA600557E31 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEBDCDC1D83EAA600557E31 /* AppDelegate.m */; };
 		9AEBDCE01D83EAA600557E31 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEBDCDF1D83EAA600557E31 /* ViewController.m */; };
@@ -22,6 +26,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		49BF30C2D3B2BA94C3F967F1 /* Pods-Ottawa Basketball Courts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ottawa Basketball Courts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ottawa Basketball Courts/Pods-Ottawa Basketball Courts.debug.xcconfig"; sourceTree = "<group>"; };
+		8414839A2397238802EAC13E /* Pods-Ottawa Basketball Courts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ottawa Basketball Courts.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ottawa Basketball Courts/Pods-Ottawa Basketball Courts.release.xcconfig"; sourceTree = "<group>"; };
+		9A9A76911EE310430079D186 /* MyDB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyDB.h; sourceTree = "<group>"; };
+		9A9A76921EE310EF0079D186 /* MyDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDB.m; sourceTree = "<group>"; };
+		9A9D86741EE31DE8004E9D24 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		9A9D86771EE35BB7004E9D24 /* basketball.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = basketball.db; path = ../basketball.db; sourceTree = "<group>"; };
 		9AEBDCD51D83EAA600557E31 /* Ottawa Basketball Courts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ottawa Basketball Courts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AEBDCD91D83EAA600557E31 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9AEBDCDB1D83EAA600557E31 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -39,6 +49,7 @@
 		9AEBDCFB1D8479BD00557E31 /* default.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = default.gpx; path = ../default.gpx; sourceTree = "<group>"; };
 		9AEBDCFD1D847B1E00557E31 /* NSObject+Court.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Court.h"; sourceTree = "<group>"; };
 		9AEBDCFE1D847B1E00557E31 /* NSObject+Court.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Court.m"; sourceTree = "<group>"; };
+		B3E6AD63CC4149DEAA8129BE /* libPods-Ottawa Basketball Courts.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Ottawa Basketball Courts.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,21 +57,43 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A9D86751EE31DE8004E9D24 /* libsqlite3.tbd in Frameworks */,
 				9AEBDCFA1D8461D300557E31 /* CoreLocation.framework in Frameworks */,
 				9AEBDCF31D83F65400557E31 /* MapKit.framework in Frameworks */,
+				634A594E644289DB4ADA7854 /* libPods-Ottawa Basketball Courts.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B1303F124BC04B4E6962040 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				49BF30C2D3B2BA94C3F967F1 /* Pods-Ottawa Basketball Courts.debug.xcconfig */,
+				8414839A2397238802EAC13E /* Pods-Ottawa Basketball Courts.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8FEA74A26C91100392E6F88D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9A9D86741EE31DE8004E9D24 /* libsqlite3.tbd */,
+				B3E6AD63CC4149DEAA8129BE /* libPods-Ottawa Basketball Courts.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9AEBDCCC1D83EAA500557E31 = {
 			isa = PBXGroup;
 			children = (
-				9AEBDCFB1D8479BD00557E31 /* default.gpx */,
 				9AEBDCF91D8461D300557E31 /* CoreLocation.framework */,
 				9AEBDCF21D83F65400557E31 /* MapKit.framework */,
+				9AEBDCFB1D8479BD00557E31 /* default.gpx */,
+				8FEA74A26C91100392E6F88D /* Frameworks */,
 				9AEBDCD71D83EAA600557E31 /* Ottawa Basketball Courts */,
+				4B1303F124BC04B4E6962040 /* Pods */,
 				9AEBDCD61D83EAA600557E31 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,19 +109,22 @@
 		9AEBDCD71D83EAA600557E31 /* Ottawa Basketball Courts */ = {
 			isa = PBXGroup;
 			children = (
+				9A9D86771EE35BB7004E9D24 /* basketball.db */,
 				9AEBDCDB1D83EAA600557E31 /* AppDelegate.h */,
-				9AEBDCDC1D83EAA600557E31 /* AppDelegate.m */,
-				9AEBDCE71D83EAA700557E31 /* Assets.xcassets */,
+				9A9A76911EE310430079D186 /* MyDB.h */,
+				9AEBDCFD1D847B1E00557E31 /* NSObject+Court.h */,
+				9AEBDCDE1D83EAA600557E31 /* ViewController.h */,
 				9AEBDCF71D84413A00557E31 /* basketball-courts.json */,
+				9AEBDCDC1D83EAA600557E31 /* AppDelegate.m */,
+				9A9A76921EE310EF0079D186 /* MyDB.m */,
+				9AEBDCFE1D847B1E00557E31 /* NSObject+Court.m */,
+				9AEBDCDF1D83EAA600557E31 /* ViewController.m */,
 				9AEBDCEC1D83EAA700557E31 /* Info.plist */,
+				9AEBDCE71D83EAA700557E31 /* Assets.xcassets */,
 				9AEBDCE91D83EAA700557E31 /* LaunchScreen.storyboard */,
 				9AEBDCE11D83EAA700557E31 /* Main.storyboard */,
-				9AEBDCFD1D847B1E00557E31 /* NSObject+Court.h */,
-				9AEBDCFE1D847B1E00557E31 /* NSObject+Court.m */,
 				9AEBDCE41D83EAA700557E31 /* Ottawa_Basketball_Courts.xcdatamodeld */,
 				9AEBDCD81D83EAA600557E31 /* Supporting Files */,
-				9AEBDCDE1D83EAA600557E31 /* ViewController.h */,
-				9AEBDCDF1D83EAA600557E31 /* ViewController.m */,
 			);
 			path = "Ottawa Basketball Courts";
 			sourceTree = "<group>";
@@ -108,9 +144,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9AEBDCEF1D83EAA700557E31 /* Build configuration list for PBXNativeTarget "Ottawa Basketball Courts" */;
 			buildPhases = (
+				167083F93678CB3AA358F17F /* [CP] Check Pods Manifest.lock */,
 				9AEBDCD11D83EAA600557E31 /* Sources */,
 				9AEBDCD21D83EAA600557E31 /* Frameworks */,
 				9AEBDCD31D83EAA600557E31 /* Resources */,
+				3C39CA3045B077AD39398DDB /* [CP] Embed Pods Frameworks */,
+				C329D692AD0565E2D157EC5D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -127,12 +166,12 @@
 		9AEBDCCD1D83EAA600557E31 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = JsonTextfield;
 				TargetAttributes = {
 					9AEBDCD41D83EAA600557E31 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 4WB75P2NL9;
+						DevelopmentTeam = M628JEJSR8;
 					};
 				};
 			};
@@ -161,6 +200,7 @@
 			files = (
 				9AEBDCF81D84413A00557E31 /* basketball-courts.json in Resources */,
 				9AEBDCEB1D83EAA700557E31 /* LaunchScreen.storyboard in Resources */,
+				9A9D86781EE35BB7004E9D24 /* basketball.db in Resources */,
 				9AEBDCE81D83EAA700557E31 /* Assets.xcassets in Resources */,
 				9AEBDCE31D83EAA700557E31 /* Main.storyboard in Resources */,
 				9AEBDCFC1D8479BD00557E31 /* default.gpx in Resources */,
@@ -168,6 +208,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		167083F93678CB3AA358F17F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3C39CA3045B077AD39398DDB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ottawa Basketball Courts/Pods-Ottawa Basketball Courts-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C329D692AD0565E2D157EC5D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ottawa Basketball Courts/Pods-Ottawa Basketball Courts-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9AEBDCD11D83EAA600557E31 /* Sources */ = {
@@ -177,6 +265,7 @@
 				9AEBDCE61D83EAA700557E31 /* Ottawa_Basketball_Courts.xcdatamodeld in Sources */,
 				9AEBDCFF1D847B1E00557E31 /* NSObject+Court.m in Sources */,
 				9AEBDCE01D83EAA600557E31 /* ViewController.m in Sources */,
+				9A9A76931EE310EF0079D186 /* MyDB.m in Sources */,
 				9AEBDCDD1D83EAA600557E31 /* AppDelegate.m in Sources */,
 				9AEBDCDA1D83EAA600557E31 /* main.m in Sources */,
 			);
@@ -218,8 +307,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -263,8 +354,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -290,12 +383,14 @@
 		};
 		9AEBDCF01D83EAA700557E31 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49BF30C2D3B2BA94C3F967F1 /* Pods-Ottawa Basketball Courts.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = M628JEJSR8;
 				INFOPLIST_FILE = "Ottawa Basketball Courts/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.json.textfield.Ottawa-Basketball-Courts";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -305,12 +400,14 @@
 		};
 		9AEBDCF11D83EAA700557E31 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8414839A2397238802EAC13E /* Pods-Ottawa Basketball Courts.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = M628JEJSR8;
 				INFOPLIST_FILE = "Ottawa Basketball Courts/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.json.textfield.Ottawa-Basketball-Courts";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -337,6 +434,7 @@
 				9AEBDCF11D83EAA700557E31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
