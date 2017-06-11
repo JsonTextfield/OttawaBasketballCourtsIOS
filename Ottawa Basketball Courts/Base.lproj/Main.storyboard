@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Mls-yR-DI9">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,77 +18,50 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" showsBuildings="NO" showsCompass="NO" showsPointsOfInterest="NO" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OaX-Wl-wKh">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" pitchEnabled="NO" showsBuildings="NO" showsCompass="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OaX-Wl-wKh">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="rPP-49-kGU">
+                                <rect key="frame" x="16" y="72" width="288" height="29"/>
+                                <segments>
+                                    <segment title="Full"/>
+                                    <segment title="All"/>
+                                    <segment title="Half"/>
+                                </segments>
+                                <color key="tintColor" red="0.96078431369999995" green="0.30980392159999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="selectionChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="HcW-5d-m3y"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="OaX-Wl-wKh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="JTB-tI-r4F"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OaX-Wl-wKh" secondAttribute="bottom" id="KU6-LB-8gV"/>
-                            <constraint firstAttribute="trailing" secondItem="OaX-Wl-wKh" secondAttribute="trailing" id="O7N-ED-2WP"/>
-                            <constraint firstItem="OaX-Wl-wKh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vro-gD-0zU"/>
+                            <constraint firstItem="rPP-49-kGU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="1xN-qz-mZy"/>
+                            <constraint firstItem="OaX-Wl-wKh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="43d-Vm-635"/>
+                            <constraint firstItem="rPP-49-kGU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="EnM-c9-VgQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OaX-Wl-wKh" secondAttribute="bottom" id="IBI-uo-pcq"/>
+                            <constraint firstAttribute="trailing" secondItem="OaX-Wl-wKh" secondAttribute="trailing" id="eAz-jk-Jw3"/>
+                            <constraint firstItem="OaX-Wl-wKh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mNb-ZK-HPR"/>
+                            <constraint firstItem="rPP-49-kGU" firstAttribute="centerX" secondItem="OaX-Wl-wKh" secondAttribute="centerX" id="ol2-6I-0Oz"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Basketball Courts" id="r1f-By-LTQ">
-                        <barButtonItem key="rightBarButtonItem" title="Filter" id="gWL-aC-SLj">
-                            <connections>
-                                <segue destination="mKv-qb-Y1n" kind="popoverPresentation" popoverAnchorBarButtonItem="gWL-aC-SLj" id="fTy-hw-Lq2">
-                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                </segue>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Basketball Courts" id="r1f-By-LTQ"/>
                     <connections>
                         <outlet property="mapView" destination="OaX-Wl-wKh" id="YcA-qk-rBa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1385" y="783"/>
-        </scene>
-        <!--Court Types-->
-        <scene sceneID="ZnI-Hq-KaT">
-            <objects>
-                <tableViewController id="Ly6-V1-z2B" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="vyB-j5-2Jl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <view key="tableFooterView" contentMode="scaleToFill" id="uhB-FR-Juu">
-                            <rect key="frame" x="0.0" y="72" width="375" height="0.0"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </view>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="type" id="SoP-GC-NCC">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SoP-GC-NCC" id="L6f-oQ-697">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="Ly6-V1-z2B" id="s8n-FV-Y0D"/>
-                            <outlet property="delegate" destination="Ly6-V1-z2B" id="YUa-Kg-FIl"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Court Types" id="Wd5-KQ-aDx">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Xby-fV-SU3"/>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="d5R-Zm-MZB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1384.8" y="1487.4062968515743"/>
+            <point key="canvasLocation" x="1383.75" y="782.74647887323943"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jaI-cL-dWs">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ByM-4F-FU8" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mls-yR-DI9" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kyt-c9-Xc3">
@@ -103,31 +77,8 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="qt8-Nx-6oq"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ByM-4F-FU8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="723" y="783"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="oLf-nR-N5c">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mKv-qb-Y1n" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OVc-lo-Pf3">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.96078431372549022" green="0.30980392156862746" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Ly6-V1-z2B" kind="relationship" relationship="rootViewController" id="elx-V0-pmJ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YcJ-Bl-5NJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="723" y="1488"/>
         </scene>
     </scenes>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

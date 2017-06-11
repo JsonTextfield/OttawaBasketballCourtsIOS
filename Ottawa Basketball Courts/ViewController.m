@@ -10,34 +10,21 @@
 #import "NSObject+Court.h"
 #import "MyDB.h"
 
-@interface ViewController ()
-@property (strong, nonatomic) IBOutlet MKMapView *mapView;
-
-@end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-        // Do any additional setup after loading the view, typically from a nib.
-    _locationManager = [[CLLocationManager alloc]init];
-    [_locationManager requestWhenInUseAuthorization];
-    CLLocation* t = [[CLLocation alloc] initWithLatitude:45.35 longitude:-75.7];
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance (t.coordinate, 2000, 2000);
-    [_mapView setRegion:region animated:NO];
-    MKMapCamera* newCamera = [[_mapView camera] copy];
-    [newCamera setHeading:-30.0]; // or newCamera.heading + 90.0 % 360.0
-    [_mapView setCamera:newCamera animated:NO];
-    
-    
-    NSArray* courts = [MyDB database].courts;
-    for (Court* it in courts){
+    _courts = [MyDB database].courts;
+    for (Court* it in _courts){
         MKPointAnnotation*  marker = [[MKPointAnnotation alloc]init];
         marker.coordinate = it.location.coordinate;
         marker.title = [NSString stringWithFormat:@"%@ - %@", it.name, it.courtType];
         [_mapView addAnnotation: (marker)];
     }
+    [_mapView showAnnotations:_mapView.annotations animated:false];
+    
     
 }
 
@@ -47,4 +34,40 @@
 }
 
 
+
+- (IBAction)selectionChanged:(UISegmentedControl *)sender {
+    [_mapView removeAnnotations:_mapView.annotations];
+    if(sender.selectedSegmentIndex == 0){
+        for (Court* it in _courts){
+            if([it.courtType  isEqual: @"full"]){
+                MKPointAnnotation*  marker = [[MKPointAnnotation alloc]init];
+                marker.coordinate = it.location.coordinate;
+                marker.title = [NSString stringWithFormat:@"%@ - %@", it.name, it.courtType];
+                [_mapView addAnnotation: (marker)];}
+        }
+        
+    }
+    if(sender.selectedSegmentIndex == 1){
+        for (Court* it in _courts){
+            MKPointAnnotation*  marker = [[MKPointAnnotation alloc]init];
+            marker.coordinate = it.location.coordinate;
+            marker.title = [NSString stringWithFormat:@"%@ - %@", it.name, it.courtType];
+            [_mapView addAnnotation: (marker)];
+        }
+        
+    }
+    if(sender.selectedSegmentIndex == 2){
+        
+        for (Court* it in _courts){
+            if([it.courtType  isEqual: @"half"]){
+                MKPointAnnotation*  marker = [[MKPointAnnotation alloc]init];
+                marker.coordinate = it.location.coordinate;
+                marker.title = [NSString stringWithFormat:@"%@ - %@", it.name, it.courtType];
+                [_mapView addAnnotation: (marker)];
+            }
+        }
+        
+    }
+    [_mapView showAnnotations:_mapView.annotations animated:true];
+}
 @end

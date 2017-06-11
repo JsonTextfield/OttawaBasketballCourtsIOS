@@ -11,5 +11,8 @@
 #import <CoreLocation/CoreLocation.h>
 @interface ViewController : UIViewController
 @property (nonatomic,retain) CLLocationManager *locationManager;
+@property (strong, nonatomic) IBOutlet MKMapView *mapView;
+- (IBAction)selectionChanged:(UISegmentedControl *)sender;
+@property NSArray* courts;
 @end
 

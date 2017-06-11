@@ -385,7 +385,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 49BF30C2D3B2BA94C3F967F1 /* Pods-Ottawa Basketball Courts.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = M628JEJSR8;
@@ -402,7 +402,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8414839A2397238802EAC13E /* Pods-Ottawa Basketball Courts.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = M628JEJSR8;
