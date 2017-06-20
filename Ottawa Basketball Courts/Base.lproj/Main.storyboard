@@ -22,8 +22,8 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" pitchEnabled="NO" showsBuildings="NO" showsCompass="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OaX-Wl-wKh">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" pitchEnabled="NO" showsBuildings="NO" showsCompass="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OaX-Wl-wKh">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </mapView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="rPP-49-kGU">
@@ -45,6 +45,7 @@
                             <constraint firstItem="OaX-Wl-wKh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="43d-Vm-635"/>
                             <constraint firstItem="rPP-49-kGU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="EnM-c9-VgQ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OaX-Wl-wKh" secondAttribute="bottom" id="IBI-uo-pcq"/>
+                            <constraint firstAttribute="bottom" secondItem="OaX-Wl-wKh" secondAttribute="bottom" id="RmY-Yl-epb"/>
                             <constraint firstAttribute="trailing" secondItem="OaX-Wl-wKh" secondAttribute="trailing" id="eAz-jk-Jw3"/>
                             <constraint firstItem="OaX-Wl-wKh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mNb-ZK-HPR"/>
                             <constraint firstItem="rPP-49-kGU" firstAttribute="centerX" secondItem="OaX-Wl-wKh" secondAttribute="centerX" id="ol2-6I-0Oz"/>
