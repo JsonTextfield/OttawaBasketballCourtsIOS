@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		634A594E644289DB4ADA7854 /* libPods-Ottawa Basketball Courts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E6AD63CC4149DEAA8129BE /* libPods-Ottawa Basketball Courts.a */; };
+		9A0EC3521EF988BF00DF3A4D /* iTunesArtwork@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A0EC3511EF988BF00DF3A4D /* iTunesArtwork@3x.png */; };
+		9A40AAA91EF80B58004A0E46 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A40AAA81EF80B58004A0E46 /* GameKit.framework */; };
+		9A40AAAB1EF80B5F004A0E46 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A40AAAA1EF80B5F004A0E46 /* StoreKit.framework */; };
 		9A9A76931EE310EF0079D186 /* MyDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9A76921EE310EF0079D186 /* MyDB.m */; };
 		9A9D86751EE31DE8004E9D24 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9D86741EE31DE8004E9D24 /* libsqlite3.tbd */; };
 		9A9D86781EE35BB7004E9D24 /* basketball.db in Resources */ = {isa = PBXBuildFile; fileRef = 9A9D86771EE35BB7004E9D24 /* basketball.db */; };
@@ -28,6 +31,9 @@
 /* Begin PBXFileReference section */
 		49BF30C2D3B2BA94C3F967F1 /* Pods-Ottawa Basketball Courts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ottawa Basketball Courts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ottawa Basketball Courts/Pods-Ottawa Basketball Courts.debug.xcconfig"; sourceTree = "<group>"; };
 		8414839A2397238802EAC13E /* Pods-Ottawa Basketball Courts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ottawa Basketball Courts.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ottawa Basketball Courts/Pods-Ottawa Basketball Courts.release.xcconfig"; sourceTree = "<group>"; };
+		9A0EC3511EF988BF00DF3A4D /* iTunesArtwork@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iTunesArtwork@3x.png"; path = "../../Untitled-2/ios/iTunesArtwork@3x.png"; sourceTree = "<group>"; };
+		9A40AAA81EF80B58004A0E46 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		9A40AAAA1EF80B5F004A0E46 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		9A9A76911EE310430079D186 /* MyDB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyDB.h; sourceTree = "<group>"; };
 		9A9A76921EE310EF0079D186 /* MyDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDB.m; sourceTree = "<group>"; };
 		9A9D86741EE31DE8004E9D24 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -60,7 +66,9 @@
 				9A9D86751EE31DE8004E9D24 /* libsqlite3.tbd in Frameworks */,
 				9AEBDCFA1D8461D300557E31 /* CoreLocation.framework in Frameworks */,
 				9AEBDCF31D83F65400557E31 /* MapKit.framework in Frameworks */,
+				9A40AAAB1EF80B5F004A0E46 /* StoreKit.framework in Frameworks */,
 				634A594E644289DB4ADA7854 /* libPods-Ottawa Basketball Courts.a in Frameworks */,
+				9A40AAA91EF80B58004A0E46 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +87,8 @@
 		8FEA74A26C91100392E6F88D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A40AAAA1EF80B5F004A0E46 /* StoreKit.framework */,
+				9A40AAA81EF80B58004A0E46 /* GameKit.framework */,
 				9A9D86741EE31DE8004E9D24 /* libsqlite3.tbd */,
 				B3E6AD63CC4149DEAA8129BE /* libPods-Ottawa Basketball Courts.a */,
 			);
@@ -120,6 +130,7 @@
 				9AEBDCFE1D847B1E00557E31 /* NSObject+Court.m */,
 				9AEBDCDF1D83EAA600557E31 /* ViewController.m */,
 				9AEBDCEC1D83EAA700557E31 /* Info.plist */,
+				9A0EC3511EF988BF00DF3A4D /* iTunesArtwork@3x.png */,
 				9AEBDCE71D83EAA700557E31 /* Assets.xcassets */,
 				9AEBDCE91D83EAA700557E31 /* LaunchScreen.storyboard */,
 				9AEBDCE11D83EAA700557E31 /* Main.storyboard */,
@@ -166,12 +177,21 @@
 		9AEBDCCD1D83EAA600557E31 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = JsonTextfield;
 				TargetAttributes = {
 					9AEBDCD41D83EAA600557E31 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = M628JEJSR8;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -199,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AEBDCF81D84413A00557E31 /* basketball-courts.json in Resources */,
+				9A0EC3521EF988BF00DF3A4D /* iTunesArtwork@3x.png in Resources */,
 				9AEBDCEB1D83EAA700557E31 /* LaunchScreen.storyboard in Resources */,
 				9A9D86781EE35BB7004E9D24 /* basketball.db in Resources */,
 				9AEBDCE81D83EAA700557E31 /* Assets.xcassets in Resources */,
@@ -302,20 +323,28 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = M628JEJSR8;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -349,20 +378,29 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = M628JEJSR8;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -388,13 +426,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M628JEJSR8;
 				INFOPLIST_FILE = "Ottawa Basketball Courts/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.json.textfield.Ottawa-Basketball-Courts";
+				PRODUCT_BUNDLE_IDENTIFIER = com.json.textfield.ottawacourts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "7adc405f-f76c-45f8-90e8-8ac917c95b8b";
+				PROVISIONING_PROFILE_SPECIFIER = bcdev2;
 			};
 			name = Debug;
 		};
@@ -403,15 +443,17 @@
 			baseConfigurationReference = 8414839A2397238802EAC13E /* Pods-Ottawa Basketball Courts.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M628JEJSR8;
 				INFOPLIST_FILE = "Ottawa Basketball Courts/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.json.textfield.Ottawa-Basketball-Courts";
+				PRODUCT_BUNDLE_IDENTIFIER = com.json.textfield.ottawacourts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "7ba5c649-f1cb-48a4-bba5-3dd6b26d22b3";
+				PROVISIONING_PROFILE_SPECIFIER = ballcourts;
 			};
 			name = Release;
 		};
