@@ -12,6 +12,7 @@
 
 
 @implementation ViewController
+NSString* stringFormat = @"%@ (%@)";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -20,7 +21,7 @@
     for (Court* it in _courts){
         MKPointAnnotation*  marker = [[MKPointAnnotation alloc]init];
         marker.coordinate = it.location.coordinate;
-        marker.title = [NSString stringWithFormat:@"%@ - %@", it.name, it.courtType];
+        marker.title = [NSString stringWithFormat:stringFormat, it.name, it.courtType];
         [_mapView addAnnotation: (marker)];
     }
     [_mapView showAnnotations:_mapView.annotations animated:false];
@@ -36,38 +37,31 @@
 
 
 - (IBAction)selectionChanged:(UISegmentedControl *)sender {
+    NSArray* sections = [[NSArray alloc] initWithObjects:@"full",@"all",@"half", nil];
     [_mapView removeAnnotations:_mapView.annotations];
-    if(sender.selectedSegmentIndex == 0){
-        for (Court* it in _courts){
-            if([it.courtType  isEqual: @"full"]){
-                MKPointAnnotation*  marker = [[MKPointAnnotation alloc]init];
-                marker.coordinate = it.location.coordinate;
-                marker.title = [NSString stringWithFormat:@"%@ - %@", it.name, it.courtType];
-                [_mapView addAnnotation: (marker)];}
-        }
-        
-    }
+    
     if(sender.selectedSegmentIndex == 1){
         for (Court* it in _courts){
             MKPointAnnotation*  marker = [[MKPointAnnotation alloc]init];
             marker.coordinate = it.location.coordinate;
-            marker.title = [NSString stringWithFormat:@"%@ - %@", it.name, it.courtType];
+            marker.title = [NSString stringWithFormat:stringFormat, it.name, it.courtType];
             [_mapView addAnnotation: (marker)];
         }
         
     }
-    if(sender.selectedSegmentIndex == 2){
-        
+    
+    else{
         for (Court* it in _courts){
-            if([it.courtType  isEqual: @"half"]){
+            if([it.courtType  isEqual: sections[sender.selectedSegmentIndex]]){
                 MKPointAnnotation*  marker = [[MKPointAnnotation alloc]init];
                 marker.coordinate = it.location.coordinate;
-                marker.title = [NSString stringWithFormat:@"%@ - %@", it.name, it.courtType];
+                marker.title = [NSString stringWithFormat:stringFormat, it.name, it.courtType];
                 [_mapView addAnnotation: (marker)];
             }
         }
         
     }
+
     [_mapView showAnnotations:_mapView.annotations animated:true];
 }
 @end

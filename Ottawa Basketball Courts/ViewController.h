@@ -11,6 +11,9 @@
 @interface ViewController : UIViewController
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 - (IBAction)selectionChanged:(UISegmentedControl *)sender;
+
 @property NSArray* courts;
+
+
 @end
 
